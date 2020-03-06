@@ -1,0 +1,54 @@
+<div class="main">
+  <div class="waraper">
+    <form id="chars">
+      <div class="uper_area">
+        <div class="image-window">
+          <%= image_tag @animal[:animal_image_file_name], class: 'animal_image' %>
+        </div>
+        <div class="content">
+          <div class="explanation"><h1 id="hint">どうぶつのなまえをえらぼう!</h1></div>
+          <div class="controller">
+            <input type="text" value="" id="result" class="input_form">
+            <div class="erase_submit">
+              <button type="button" id="erase_btn" class="form_btn erase_btn" value="">
+                <%= image_tag "bunbougu_keshigomu.png", class: "eraser_img" %>
+              </button>
+              <button type="button" id="btn" class="form_btn judge_btn">こたえ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hiragana_area">
+        <% @disp_hiragana.each do |hiragana| %>
+          <button type="button" class="hiragana_btn" value="<%= hiragana.name %>">
+            <%= image_tag hiragana.hiragana_image %>
+          </button>
+        <% end %>
+      </div>
+    </form>
+    <button class="retry_btn" onclick="window.location.reload();">つぎのどうぶつ</button>
+  </div>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <p class="message seikai">せいかい！</p>
+      <div class="modal_img">
+        <%= image_tag @animal[:animal_image_file_name], class: "animal_image" %>
+        <p class='animal_name'><%= @animal[:name] %></p>
+      </div>
+      <button class="retry_btn" onclick="window.location.reload();">つぎのどうぶつ</button>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <p class="message">ちがうよ</p>
+      <div class="modal_img">
+        <%= image_tag 'mark_manpu13_kega.png', class: "animal_image" %>
+      </div>
+      <button id="back" class="retry_btn">もどる</button>
+    </div>
+  </div>
+</div>
+<input name="answer" type="hidden" value=<%= @animal[:name] %> id="answer" >
+<input name="answer" type="hidden" value=<%= @animal[:name].length %> id="length" >
