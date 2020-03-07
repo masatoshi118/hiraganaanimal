@@ -95,6 +95,7 @@
   button {
     overflow: visible; /* 1 */
     text-transform: none; /* 2 */
+    -webkit-appearance: none;
   }
 
   button,
@@ -384,7 +385,7 @@ input[type=text] {
    margin: 20px;
    padding: 30px;
  }
- 
+
  .retry_btn{
    margin-right: auto;
    margin-left: auto;
