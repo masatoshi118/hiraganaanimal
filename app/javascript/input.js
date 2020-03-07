@@ -55,6 +55,6 @@ window.onload = function() {
     hint.style.color = '#F88FB3'
  }
 
-  window.setTimeout(hint_message, 8000)
+  window.setTimeout(hint_message, 10000)
 
 }
