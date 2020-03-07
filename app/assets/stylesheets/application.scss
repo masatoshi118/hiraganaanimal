@@ -141,21 +141,7 @@ input[type=text] {
   vertical-align: top;
 }
 
-input[type="submit"],
-input[type="button"] {
-  border-radius: 0;
-  -webkit-box-sizing: content-box;
-  -webkit-appearance: button;
-  appearance: button;
-  border: none;
-  box-sizing: border-box;
-    &::-webkit-search-decoration {
-      display: none;
-    }
-    &::focus {
-      outline-offset: -2px;
-    }
-}
+
 
 // ヘッダー部分
 
@@ -254,13 +240,13 @@ input[type="button"] {
 }
 
  .form_btn {
-   height: 48%;
    width: 100%;
    border-radius: 10px;
    margin-bottom: 10px;
  }
 
  .erase_btn {
+   height: 67px;
    background-color: #adefff;
  }
 
@@ -281,10 +267,10 @@ input[type="button"] {
    text-align: center;
    background-color: #ff792b;
    font-family: 'arial unicode ms';
-   font-size: 35px;
+   font-size: 30px;
    color: white;
    -webkit-appearance: none;
-   line-height: 48%;
+   line-height: 60px;
  }
 
  .judge_btn:hover {
