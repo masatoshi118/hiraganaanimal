@@ -18,6 +18,7 @@
     <header>
       <div class="waraper">
         <h1 class="h1"><i class="fas fa-pencil-alt"></i>ひらがなどうぶつ</h1>
+        <%= audio_tag("colorful.mp3", id: "bgm", autoplay: true, autobuffer: true, loop: true) %>
       </div>
     </header>
     <%= yield %>

@@ -8,7 +8,8 @@ window.onload = function() {
   var buttons = document.getElementById('chars').getElementsByClassName('hiragana_btn')
   for (var i = 0, n = buttons.length; i < n; i++) {
     buttons[i].onclick = function() {
-      document.getElementById('result').value += this.value
+    document.getElementById('result').value += this.value
+    this.querySelector('audio').play()
     }
   }
 
@@ -23,9 +24,12 @@ window.onload = function() {
     var input_message = document.getElementById('result').value
     var animal_name_js = document.getElementById('answer').value
     var back_btn = document.getElementById('back')
+    var correct = document.getElementById('correct')
+    var mistake = document.getElementById('mistake')
 
     if (input_message == animal_name_js) {
       modal1.style.display = 'block'
+      correct.play()
 
       window.addEventListener('click', function(e) {
         if (e.target == modal1) {
@@ -34,6 +38,7 @@ window.onload = function() {
       })
     }else{
       modal2.style.display = 'block'
+      mistake.play()
 
       back_btn.addEventListener('click', function() {
         modal2.style.display = 'none'

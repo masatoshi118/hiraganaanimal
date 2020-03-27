@@ -21,4 +21,15 @@ namespace :import_csv do
     Hiragana.create!(hiragana_list)
     puts '平仮名データの投入に成功しました'
   end
+
+  desc 'サウンドデータをインポートするタスク'
+  task sounds_data: :environment do
+    #データベースのサウンドデータを消去
+    Sound.destroy_all
+    # 現在のサウンドデータをインポートした配列を作成
+    sounds_list = Import.csv_data(path: 'db/csv_data/sounds.csv')
+    # サウンドデータをデータベースに投入
+    Sound.create!(sounds_list)
+    puts 'サウンドデータの投入に成功しました'
+  end
 end

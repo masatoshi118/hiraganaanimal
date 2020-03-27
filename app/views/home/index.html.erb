@@ -19,9 +19,10 @@
         </div>
       </div>
       <div class="hiragana_area">
-        <% @disp_hiragana.each do |hiragana| %>
+        <% @disp_hiragana.zip(@sounds).each do |hiragana, sound| %>
           <button type="button" class="hiragana_btn" value="<%= hiragana.name %>">
             <%= image_tag hiragana.hiragana_image %>
+            <%= audio_tag("#{sound.sound_file_name}", autobuffer: true) %>
           </button>
         <% end %>
       </div>
@@ -30,6 +31,7 @@
   </div>
 
   <div id="modal1" class="modal">
+    <%= audio_tag("correct1.mp3", id: 'correct', autobuffer: true) %>
     <div class="modal-content">
       <p class="message seikai">せいかい！</p>
       <div class="modal_img">
@@ -41,6 +43,7 @@
   </div>
 
   <div id="modal2" class="modal">
+    <%= audio_tag("stupid4.mp3", id: 'mistake', autobuffer: true) %>
     <div class="modal-content">
       <p class="message">ちがうよ</p>
       <div class="modal_img">
