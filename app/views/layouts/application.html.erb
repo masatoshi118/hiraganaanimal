@@ -17,8 +17,16 @@
   <body>
     <header>
       <div class="waraper">
-        <h1 class="h1"><i class="fas fa-pencil-alt"></i>ひらがなどうぶつ</h1>
-        <%= audio_tag("colorful.mp3", id: "bgm", autoplay: true, autobuffer: true, loop: true) %>
+        <div>
+          <h1 class="h1"><i class="fas fa-pencil-alt"></i>ひらがなどうぶつ</h1>
+          <%= audio_tag("colorful.mp3", id: "bgm", autoplay: true, autobuffer: true, loop: true, muted: true) %>
+        </div>
+
+        <div class="sound">
+          <i class="fas fa-music"></i>
+          <button type="button" id="enable_sound">あり</button>
+          <button type="button" id="mute_sound">なし</button>
+        </div>
       </div>
     </header>
     <%= yield %>

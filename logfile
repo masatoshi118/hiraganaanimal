@@ -1,0 +1,10 @@
+2020-03-31 11:32:47.306 JST [7843] LOG:  starting PostgreSQL 12.1 on x86_64-apple-darwin19.2.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.16), 64-bit
+2020-03-31 11:32:47.307 JST [7843] LOG:  listening on IPv6 address "::1", port 5432
+2020-03-31 11:32:47.307 JST [7843] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-03-31 11:32:47.308 JST [7843] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-03-31 11:32:47.342 JST [7844] LOG:  database system was shut down at 2020-03-26 16:35:57 JST
+2020-03-31 11:32:47.353 JST [7843] LOG:  database system is ready to accept connections
+2020-03-31 11:32:54.381 JST [7945] ERROR:  database "animal_face_resp_development" already exists
+2020-03-31 11:32:54.381 JST [7945] STATEMENT:  CREATE DATABASE "animal_face_resp_development" ENCODING = 'unicode'
+2020-03-31 11:32:54.388 JST [7954] ERROR:  database "animal_face_resp_test" already exists
+2020-03-31 11:32:54.388 JST [7954] STATEMENT:  CREATE DATABASE "animal_face_resp_test" ENCODING = 'unicode'
