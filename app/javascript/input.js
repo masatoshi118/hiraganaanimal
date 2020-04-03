@@ -8,7 +8,7 @@ window.onload = function() {
 
   // ミュートを解除するファンクション
   function muteOnOff(state){
-    Array.prototype.slice.call(document.querySelectorAll('audio')).forEach(function(audio) {
+    document.querySelectorAll('audio').forEach(function(audio) {
       audio.muted = state
     })
   }
