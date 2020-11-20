@@ -1,0 +1,3 @@
+[submodule "hiraganaanimal.wiki"]
+	path = hiraganaanimal.wiki
+	url = https://github.com/masatoshi118/hiraganaanimal.wiki.git
