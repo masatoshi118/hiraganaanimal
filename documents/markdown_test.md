@@ -152,7 +152,7 @@ mkdir images
 * `![代替テキスト](画像のURL)`で画像を挿入することができます。
 * 現在，新サービス関連のドキュメントをgithubで管理しようとしています。今回はgithubにアップロードした画像を挿入します。
 
-![画像の例](https://github.com/masatoshi118/hiraganaanimal.wiki/images/code-1839406_640.jpg)
+![画像の例](https://github.com/masatoshi118/wiki/images/code-1839406_640.png)
 
 <br>
 
